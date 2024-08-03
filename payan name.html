@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+
+<head>
+    <meta charset = 'UTF-8'>
+    <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+    <title>Ershad Damavand University</title>
+    <link rel="stylesheet" href= "headerstyle.css">
+    <script src="https://kit.fontawsome.com/a076d05399js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src = 'https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href = 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' rel = 'stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+    </script>
+    <script>
+$(document).ready(function() {
+    $(".btn-circle-download").click(function() {
+        var $btn = $(this);
+
+        $btn.addClass("load");
+
+        setTimeout(function() {
+            $btn.addClass("done");
+            setTimeout(function() {
+                $btn.removeClass("load done");
+                $btn.find("svg#arrow, svg#border").fadeOut(200);
+                $btn.find("svg#check").fadeIn().addClass("show");
+
+                // Reset the clicked button
+                setTimeout(function() {
+                    $btn.find("svg#arrow, svg#border").fadeIn(200);
+                    $btn.find("svg#check").fadeOut().removeClass("show");
+                }, 0);
+            }, 500);
+        }, 1000);
+    });
+});
+    </script>
+    <style>
+        @import url('https://fonts.googlepis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+    text-align: center;
+    padding: 1rem;
+}
+
+span {
+    font-size: 0.9rem;
+    color: #757373;
+}
+
+.navre {
+    display: flex;
+    flex-direction: row;
+    padding: 4vw 8vw;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.15);
+}
+
+
+.omoor{ 
+    padding: 0.7rem 3rem;
+    text-align: justify;
+    line-height: 2rem;
+    background-color: #abdbf477;
+    border-radius: 10px;
+    width: 48rem;
+    /*margin: 0rem 5rem;*/
+    position: absolute;
+    left: 29rem;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .omoor {
+        width: 95%;
+        position: static;
+        text-align: justify;
+        margin: 1rem;
+    }
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+.par2{   
+    padding: 0.5rem 5rem;
+    text-align: right;
+    line-height: 1.9rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+.table-fill {
+    background: #84f2de;
+    border-radius: 8px;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 10px;
+    max-width: 1000px;
+    min-width: 420px;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+    line-height: 20px;
+}
+
+th {
+    border-bottom: 2px solid #147a68;
+    border-right: 1px solid #147a68;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th:first-child {
+    border-right: none;
+}
+
+th:last-child {
+    border-top-right-radius: 3px;
+}
+
+tr {
+    text-align: center;
+}
+
+tr:nth-child(odd) td {
+    background: #d0f7f1;
+}
+
+tr:nth-child(even) td {
+    background-color: #e1faf6;
+}
+
+tr:hover td,
+tr:focus td {
+    box-shadow: inset 0 -3.25em 0 0 car(--hover);
+    transform: translateY(-0.25em);
+    transition-duration: 500ms;
+    background: #22ceb0;
+    color: white;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 3px;
+}
+
+th:last-child td:last-child {
+    border-bottom-right-radius: 3px;
+}
+ 
+td {
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 25px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid #147a68;
+}
+  
+td:last-child {
+    border-left: none;
+}
+  
+h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+.links1 {
+    padding: 0.7rem 3rem;
+    text-align: center;
+    line-height: 2rem;
+    background-color: #abdbf477;
+    border-radius: 10px;
+    width: 25rem;
+    margin: 0rem 0rem;
+    position: absolute;
+    left: 2rem;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .links1 {
+        width: 95%;
+        position: static;
+        text-align: center;
+        margin: 1rem;
+    }
+}
+
+.link1 {
+    text-decoration: none;
+    color:#000000;
+	position: relative;
+	transition: color .3s ease-in;
+    --link-1: #2c6e4f;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		height: 3px;
+		background-color: var(--link-1);
+		transform: scaleX(0);
+		transition: transform .3s ease-in;
+	}	
+	&:hover {
+		color: var(--link-1);
+	}
+	&:hover::before {
+		transform: scaleX(1);
+	}	
+}
+
+.contact {
+    padding: 0.7rem 3rem;
+    text-align: center;
+    line-height: 2rem;
+    background-color: #abdbf477;
+    border-radius: 10px;
+    width: 25rem;
+    height: 11.31rem;
+    margin: 0rem 0rem;
+    position: absolute;
+    left: 2rem;
+    top: 26rem;
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        width: 95%;
+        position: static;
+        text-align: center;
+        margin: 1rem;
+    }
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+.instagram {
+    font-size: 30px;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    --hover:#ee653d;
+    background: radial-gradient(circle at 30% 110%,
+    #ffdb8b 0%,
+    #ee653d 25%,
+    #d42e81 50%,
+    #a237b6 75%,
+    #3e57bc 100%);
+    border-radius: 37px;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 70%;
+    top: 50%;
+    transition-duration: 500ms;
+}
+
+.instagram:hover,
+.instagram:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition-duration: 500ms;
+}
+
+@media screen and (max-width: 768px) {
+    .instagram {
+        position: relative;
+        text-align: center;
+        right: 80%;
+        top: 35%;
+    }
+}
+
+.gmail {
+    font-size: 25px;
+    width: 2.9rem;
+    height: 2.9rem;
+    color: white;
+    --hover: #c71610;
+    background: #c71610;
+    border-radius: 37px;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 44.5%;
+    top: 50.5%;
+    transition-duration: 500ms;
+}
+
+.gmail:hover,
+.gmail:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition-duration: 500ms;
+}
+
+@media screen and (max-width: 768px) {
+    .gmail {
+        position: relative;
+        text-align: center;
+        right: 44%;
+        top: 5%;
+    }
+}
+
+.phone {
+    font-size: 30px;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    --hover: #009688;
+    background: #009688;
+    border-radius: 37px;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 19%;
+    top: 50%;
+    transition-duration: 500ms;
+}
+
+.phone:hover,
+.phone:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition-duration: 500ms;
+}
+
+@media screen and (max-width: 768px) {
+    .phone {
+        position: relative;
+        text-align: center;
+        right: 8%;
+        top: -25%;
+    }
+}
+
+footer {
+        margin-top: 66rem;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        position: relative;
+        top: 160rem;
+    }
+}
+.next-button {
+    position: relative;
+    top: 3ch;
+    right: 150px;
+}
+
+@media screen and (max-width: 900px) {
+    .next-button {
+        position: relative;
+        top: 0%;
+        right: 0%;
+    }
+}
+
+.payan-name {
+    position: relative;
+    padding: 19px 0px;
+    margin: auto;
+    width: 750px;
+}
+/*
+@media screen and (max-width: 900px) {
+    .payan-name {
+        padding: 63px 0px;
+        width: 50%;
+        margin: 0 23%;
+    }
+}
+*/
+.payan-name-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    scale: 1.3;
+}
+/*
+@media screen and (max-width: 650px) {
+    .payan-name-card {
+        display: grid;
+        scale: 1.7;
+        gap: 17px;
+        grid-template-columns: repeat(2, 150px);
+    }
+}*/
+/*
+@media (min-width: 650px) and (max-width: 900px) {
+    .payan-name-card {
+        display: grid;
+        scale: 1.7;
+        gap: 17px;
+        grid-template-columns: repeat(3, 150px);
+    }
+}
+*/
+.card {
+    position: relative;
+    left: 0;
+    width: 130px;
+    height: 120px;
+    background: linear-gradient(45deg, #44e2c8, #0f7866);
+    border-radius: 8px;
+    transition: 1000ms all;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    outline: 1px solid var(--background);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: center;
+    box-shadow: 0 0 20px #00fffc;
+    margin: 0;
+}
+
+.card:hover figcaption {
+    font-size: 0.7rem;
+    height: 120px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,
+    #147a68 0%,
+    #1ca68e 100%);
+    color: white;
+    margin: 0px;
+}
+
+.card:hover~.card {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h6 {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h7 {
+    color:rgb(35, 35, 85);
+    font-size: 30px;
+    font-weight: 800;
+    margin: auto;
+}
+
+.payan-name-tables {
+    position: relative;
+    margin: -100px auto;
+    width: 100%;
+    /*top: 70px;
+    left: 26.5px;*/
+    scale: 0.8;
+    
+}
+/*
+@media screen and (max-width: 768px) {
+    h7 {
+        position: relative;
+        left: -5rem;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .payan-name-tables {
+        position: absolute;
+        margin: -25rem 0;
+        width: 100%;
+        scale: 0.6;
+    }
+
+    #form-nomre {
+        position: relative;
+        left: 18rem;
+    }
+
+    .form-nomre-header {
+        position: relative;
+        top: -7.5rem;
+        left: -12rem;
+    }
+}*/
+
+.btn-circle-download {
+    position: relative;
+    height: 43px;
+    width: 43px;
+    margin: auto;
+    border-radius: 100%;
+    background-color: #1ead96;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.btn-circle-download:after {
+    content: '';
+    position: relative;
+    width: 200%;
+    height: 100%;
+    background-image: linear-gradient(100deg , rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+    transform: translateX(-100%);
+}
+
+.btn-circle-download svg {
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.btn-circle-download svg#border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    stroke: none;
+    stroke-dasharray: 144;
+    stroke-dashoffset: 144;
+    transition: all 0.9s linear;
+}
+
+.btn-circle-download svg#arrow {
+    position: absolute;
+    top: 11px;
+    left: 14.5px;
+    stroke: white;
+    transition: all 0.2s ease;
+}
+
+.btn-circle-download svg#check {
+    position: relative;
+    top: 17px;
+    left: 13px;
+    transform: scale(0);
+    transition: all 0.2s ease;
+} 
+  
+.btn-circle-download:hover {
+    background: white;
+}
+  
+.btn-circle-download:hover svg#arrow path,
+.btn-circle-download:hover svg#arrow polyline {
+    stroke: #178a77;
+}
+  
+.btn-circle-download.load {
+    background: #11f1cb;
+}
+  
+.btn-circle-download.load svg#arrow path,
+.btn-circle-download.load svg#arrow polyline {
+    stroke: white;
+}
+  
+.btn-circle-download.load svg#border {
+    stroke: white;
+    stroke-dasharray: 144;
+    stroke-dashoffset: 0;
+}
+
+.btn-circle-download.done {
+    background: #11f1cb;
+    animation: rubberBand 0.8s;
+}
+  
+.btn-circle-download.done:after {
+    transform: translateX(50%);
+    transition: transform 0.4s ease;
+    transition-delay: 0.2s;
+}
+  
+.btn-circle-download.done svg#border,
+.btn-circle-download.done svg#arrow {
+    display: none;
+}
+  
+.btn-circle-download.done svg#check {
+    background: red;
+    transform: scale(1);
+    transition: all 0.2s ease;
+    transition-delay: 0.2s;
+}
+  
+@keyframes rubberBand {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.15, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.15, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.10, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+}
+  
+.credit {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: all 0.2s ease;
+    -webkit-user-select: none;
+    user-select: none;
+    opacity: 0.6;
+}
+  
+.credit img {
+    width: 72px;
+}
+  
+.credit:hover {
+    transform: scale(0.95);
+}
+
+
+@media (min-width: 900px) and (max-width: 960px) {
+    .main-page {
+      scale: 73%;
+      margin: -13.1rem -11.5rem;
+      overflow-x: hidden;
+    }
+
+    .main-page-payanname {
+      scale: 72%;
+      margin: -19rem -11rem;
+      overflow-x: hidden;
+    }
+
+    .payan-name-card {
+        scale: 150%;
+    }
+
+    .form-nomre-header {
+        position: relative; 
+        left: -400px; 
+        top: -125px;
+    }
+
+    .main-page-chartdarsi {
+        scale: 72%;
+        margin: -30rem -11.5rem;
+        overflow-x: hidden;
+      }
+}
+
+@media (min-width: 960px) and (max-width: 1010px) {
+  .main-page {
+    scale: 76%;
+    margin: -11.6rem -10rem;
+    overflow-x: hidden;
+  }
+
+  .main-page-payanname {
+      scale: 76%;
+      margin: -16.5rem -9.5rem;
+      overflow-x: hidden;
+    }
+
+    .payan-name-card {
+        scale: 150%;
+    }
+
+    .form-nomre-header {
+        position: relative; 
+        left: -400px; 
+        top: -125px;
+    }
+
+    .main-page-chartdarsi {
+        scale: 76%;
+        margin: -25.5rem -9.5rem;
+        overflow-x: hidden;
+      }
+}
+
+@media (min-width: 1010px) and (max-width: 1080px) {
+  .main-page {
+    scale: 82%;
+    margin: -9rem -8rem;
+    overflow-x: hidden;
+  }
+
+  .main-page-payanname {
+      scale: 81%;
+      margin: -13rem -8rem;
+      overflow-x: hidden;
+    }
+
+    .payan-name-card {
+        scale: 150%;
+    }
+
+    .form-nomre-header {
+        position: relative; 
+        left: -400px; 
+        top: -125px;
+    }
+
+    .main-page-chartdarsi {
+        scale: 78%;
+        margin: -23.5rem -10rem;
+        overflow-x: hidden;
+      }
+}
+
+@media (min-width: 1080px) and (max-width: 1130px) {
+  .main-page {
+    scale: 87%;
+    margin: -6.2rem -5.7rem;
+    overflow-x: hidden;
+  }
+
+  .main-page-payanname {
+      scale: 86%;
+      margin: -10rem -5.8rem;
+      overflow-x: hidden;
+    }
+
+    .header-payanname {
+        position: relative;
+        left: 0rem;
+        top: 0rem;
+    }
+
+    .payan-name-card {
+        scale: 145%;
+    }
+
+    .main-page-chartdarsi {
+        scale: 85%;
+        margin: -16rem -7rem;
+        overflow-x: hidden;
+      }
+}
+
+@media (min-width: 1130px) and (max-width: 1195px) {
+  .main-page {
+    scale: 90%;
+    margin: -5rem -4.2rem;
+    overflow-x: hidden;
+  }
+
+  .main-page-payanname {
+      scale: 89.5%;
+      margin: -6rem -4rem;
+      overflow-x: hidden;
+    }
+    
+    .payan-name-card {
+        scale: 140%;
+    }
+
+    .main-page-chartdarsi {
+        scale: 87.5%;
+        margin: -13.5rem -5.5rem;
+        overflow-x: hidden;
+      }
+}
+
+@media (min-width: 1195px) and (max-width: 1450px) {
+  .main-page {
+    scale: 96%;
+    margin: -2.3rem -2.1rem;
+    overflow-x: hidden;
+  }
+
+  .main-page-payanname {
+      scale: 94.5%;
+      margin: -4rem -2rem;
+      overflow-x: hidden;
+    }
+
+    .main-page-chartdarsi {
+        scale: 93%;
+        margin: -7.5rem -3rem;
+        overflow-x: hidden;
+      }
+}
+
+@media (min-width: 1450px) {
+    .main-page {
+        scale: 112%;
+        margin: 6rem 9rem;
+        overflow-x: hidden
+    }
+
+    .header-payanname {
+        scale: 110%;
+        position: relative;
+        left: -14rem;
+        width: 105%;
+    }
+
+    .main-page-payanname {
+        scale: 112%;
+        margin: 8.5rem 0rem;
+        overflow-x: hidden;
+    }
+
+    .main-page-chartdarsi {
+        scale: 110%;
+        margin: 11rem 6rem;
+        overflow-x: hidden;
+    }
+
+    .header-chartdarsi {
+        width: 106%;
+        margin: -1rem -2rem; 
+    }
+
+    footer {
+        scale: 108%;
+    }
+} 
+
+@media screen and (max-width: 900px) {
+  .omoor {
+      width: 95%;
+      position: static;
+      text-align: justify;
+      margin: 1rem;
+  }
+  .links1 {
+      width: 95%;
+      position: static;
+      text-align: center;
+      margin: 1rem;
+  }
+  .contact {
+      width: 95%;
+      position: static;
+      text-align: center;
+      margin: 1rem;
+  }
+  .instagram {
+      position: relative;
+      text-align: center;
+      right: 80%;
+      top: 35%;
+  }
+  .gmail {
+      position: relative;
+      text-align: center;
+      right: 44%;
+      top: 5%;
+  }
+  .phone {
+      position: relative;
+      text-align: center;
+      right: 8%;
+      top: -25%;
+  }
+  .next-button {
+      position: relative;
+      top: 0%;
+      right: 0%;
+  }
+  .omoor-far {
+      width: 95%;
+      position: static;
+      text-align: justify;
+      margin: 1rem;
+  }
+  .links-far {
+      width: 95%;
+      position: static;
+      text-align: center;
+      margin: 1rem;
+  }
+  .tashakols-links {
+      width: 95%;
+      position: static;
+      text-align: center;
+      margin: 1rem;
+  }
+  h10 {
+      position: static;
+      top: 95%;
+  }
+  .container-far{
+      width: 95%;
+      top: 20px;
+      left: 12px;
+  }
+  .main-page-payanname {
+    scale: 48%;
+    margin: -46rem -7rem;
+    overflow-x: hidden;
+  }
+
+  .header-payanname {
+    scale: 153%;
+    margin: 5rem 0rem;
+    overflow: hidden;
+  }
+
+  .main-page-chartdarsi {
+    scale: 71%;
+    margin: -31rem -11.5rem;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 550px) {
+    .main-page-payanname {
+        scale: 38%;
+        margin: -64rem -10rem;
+    }
+
+    .payan-name-card {
+        scale: 160%;
+    }
+
+    .header-payanname {
+        scale: 158%;
+    }
+
+    .footer-payanname {
+        scale: 160%;
+        position: relative;
+        top: 20rem;
+    }
+
+    .main-page-chartdarsi {
+        scale: 42%;
+        margin: -74rem -8rem;
+        overflow-x: hidden;
+      }
+    
+    .header-chartdarsi {
+        scale: 160%;
+        overflow: hidden;
+        position: relative;
+        top: -50px;
+    }
+
+    .footer-chartdarsi {
+        scale: 160%;
+        position: relative;
+        top: 20rem;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 630px) {
+    .main-page-payanname {
+        scale: 47%;
+        margin: -55rem -9rem;
+    }
+
+    .payan-name-card {
+        scale: 160%;
+    }
+
+    .header-payanname {
+        scale: 150%;
+    }
+
+    .footer-payanname {
+        scale: 160%;
+        position: relative;
+        top: 20rem;
+    }
+
+    .main-page-chartdarsi {
+        scale: 47%;
+        margin: -69rem -14.5rem;
+        overflow-x: hidden;
+      }
+
+    .header-chartdarsi {
+        scale: 123%;
+        overflow: hidden;
+    }
+
+    .footer-chartdarsi {
+        scale: 120%;
+        position: relative;
+        top: 10rem;
+    }
+    
+}
+
+@media (min-width: 630px) and (max-width: 720px) {
+    .main-page-payanname {
+        scale: 50%;
+        margin: -44rem -5rem;
+    }
+
+    .payan-name-card {
+        scale: 160%;
+    }
+
+    .header-payanname {
+        scale: 160%;
+    }
+
+    .footer-payanname {
+        scale: 160%;
+        position: relative;
+        top: 20rem;
+    }
+
+    .main-page-chartdarsi {
+        scale: 50%;
+        margin: -57.5rem -14.5rem;
+        overflow-x: hidden;
+      }
+
+    .header-chartdarsi {
+        scale: 119%;
+        overflow: hidden;
+    }
+
+    .footer-chartdarsi {
+        scale: 120%;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 900px) {
+    .main-page-payanname {
+        scale: 57%;
+        margin: -38rem -2rem;
+    }
+
+    .payan-name-card {
+        scale: 160%;
+    }
+
+    .header-payanname {
+        scale: 162%;
+    }
+
+    .footer-payanname {
+        scale: 160%;
+        position: relative;
+        top: 20rem;
+    }
+
+    .main-page-chartdarsi {
+        scale: 58%;
+        margin: -48rem -13.3rem;
+        overflow-x: hidden;
+      }
+
+    .header-chartdarsi {
+        scale: 116%;
+        overflow: hidden;
+    }
+
+    .footer-chartdarsi {
+        scale: 112%;
+    }
+}
+    </style>
+</head>
+
+<body class = 'main-page-payanname'>
+    <header dir = 'rtl' class = 'header-payanname'>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+    
+            <div class="logo-container">
+              <a href="/"></a><img src="https://e-damavandihe.ac.ir/Sites/Files/1444/logo-ershad-1.png" alt="ershad-logo">
+            </div>
+    
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="sample-home.html">خانه</a>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">درباره ما<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="moarefi-ershad.html">معرفی موسسه</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="h-moases.html">هیأت موسس</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">چارت سازمانی</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">پرسنل موسسه</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">دانشکده ها<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="daneshkade-modiriat.html">دانشکده مدیریت و حسابداری</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="daneshkade-fani.html">دانشکده فنی و مهندسی</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="daneshkade-ensani.html">دانشکده علوم انسانی</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                      <a href="#">اساتید<i class="fas fa-caret-down"></i></a>
+                                      <div class="dropdown second">
+                                          <ul>
+                                              <li class="dropdown-link">
+                                                  <a href="#">اعضای هیئت علمی</a>
+                                              </li>
+                                              <li class="dropdown-link">
+                                                  <a href="#">اساتید مدعو</a>
+                                              </li>
+                                              <li class="dropdown-link">
+                                                  <a href="#">همکاری با ما</a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">آموزش<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">تقویم آموزشی</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="chart darsi.html">چارت درسی</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="forms.html">فرم های آموزشی</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">راهنمای آموزش مجازی</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">گروه های آموزشی<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">مدیران  گروه های آموزشی</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">گروه مدیریت</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">گروه حسابداری و مالی</a>
+                                                </li>
+                                                <div class="dropdown-link">
+                                                  <a href="#">گروه مهندسی صنایع و انرژی</a>
+                                                </div>
+                                                <div class="dropdown-link">
+                                                  <a href="#">گروه مهندسی کامپیوتر</a>
+                                                </div>
+                                                <div class="dropdown-link">
+                                                  <a href="#">گروه حقوق</a>
+                                                </div>
+                                                <div class="dropdown-link">
+                                                  <a href="#">گروه زبان انگلیسی</a>
+                                                </div>
+                                                <div class="dropdown-link">
+                                                  <a href="#">گروه معماری</a>
+                                                </div>
+                                                <div class="dropdown-link">
+                                                  <a href="#">گروه معماری</a>
+                                                </div>
+                                                <div class="dropdown-link">
+                                                  <a href="#">گروه تربیت بدنی</a>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                          <a href="#">پژوهش و دانشجو<i class="fas fa-caret-down"></i></a>
+                          <div class="dropdown">
+                              <ul>
+                                  <li class="dropdown-link">
+                                      <a href="vahed pazhohesh.html">معرفی واحد پژوهش</a>
+                                  </li>
+                                  <li class="dropdown-link">
+                                      <a href="#">رویداد های پژوهشی</a>
+                                  </li>
+                                  <li class="dropdown-link">
+                                      <a href="omoor daneshjoooyi.html">امور دانشجویی</a>
+                                  </li>
+                                  <li class="dropdown-link">
+                                    <a href="omoor farhangi.html">امور فرهنگی</a>
+                                  </li>
+                                  <div class="arrow"></div>
+                              </ul>
+                          </div>
+                      </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">ارتباط با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-box">
+              <input type="text" placeholder="جستجو...">
+              <a href="#"> 
+                  <i class="fas fa-search"></i>
+              </a>
+           </div>
+           <div class="log-sign" style="--i: 1.8s">
+              <a href="https://e-damavandihe.ac.ir/dashboard.pc" class="btn transparent">ورود</a>
+              <!-- <a href="#" class="btn solid">english</a> -->
+          </div>
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+<main>
+    <!--payan name-->
+    <div id = 'page4'>
+        <h1>پایان نامه</h1>
+    <!--leading cards-->
+    <section align = center class = payan-name>
+        <div class = 'payan-name-card' dir = 'rtl'>
+            <article class = 'card'>
+                <figcaption>
+                    <a href = '#form-pazhoheshy'><h6>فرم های پژوهشی</h6></a> 
+                </figcaption>
+            </article>
+            <article class = 'card'>
+                <figcaption>
+                    <a href = '#form-nomre'><h6>فرم نمره مقاله</h6></a>
+                </figcaption>
+            </article>
+            <article class = 'card'>
+                <figcaption>
+                    <a href = '#form-proposal'><h6>فرم عنوان پیشنهادی و پروپوزال</h6></a>
+                </figcaption>
+            </article>
+            <article class = 'card'>
+                <figcaption>
+                    <a href = '#samane-hamanandjoo'><h6>سامانه همانندجو</h6></a>
+                </figcaption>
+            </article>
+            <article class = 'card'>
+                <figcaption>
+                    <a href = '#jeld-payanname'><h6>جلد پایان نامه ها</h6></a>
+                </figcaption>
+            </article>
+        </div>
+        
+        <!--tables-->
+        <div class = 'payan-name-tables' dir = 'rtl'>
+        <table class = 'table-fill' id = 'form-pazhoheshy'  style = 'position: absolute; left: 400px;'>
+            <h7 style = 'position: relative; left: 400px;'>فرم های پژوهشی</h7>
+            <thead>
+                <tr>
+                    <th>شماره</th>
+                    <th>فرم</th>
+                    <th>فایل PDF</th>
+                    <th>فایل Word</th>
+                </tr>
+            </thead>
+            <tbody class = 'table-hover'>
+                <tr>
+                    <td>1</td>
+                    <td>فرمت جدید صحافی پایان نامه دانشجویان ارشد</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/926/PP.pdf'> 
+                    <div class = 'btn-circle-download'>
+                        <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                            <path d = 'M24,15 L24,32'></path>
+                            <polyline points = '30 27 24 33 18 27'></polyline>
+                        </svg>
+                        <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                            <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                          </svg>
+                          <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                            <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                          </svg>
+                        </div>
+                        <!-- dribbble -->
+                        <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                    </a>
+                </td>
+                <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/925/PP.docx'>
+                    <div class = 'btn-circle-download'>
+                        <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                            <path d = 'M24,15 L24,32'></path>
+                            <polyline points = '30 27 24 33 18 27'></polyline>
+                        </svg>
+                        <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                            <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                          </svg>
+                          <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                            <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                          </svg>
+                        </div>
+                        <!-- dribbble -->
+                        <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                    </a>
+                </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>فرم آمادگی دفاع و تعیین استاد داور برای دانشجویان ارشد(جدید)</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/3008/%D9%81%D8%B1%D9%85---3--19---.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>فرم درس سمینار</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/400/%D8%B3%D9%85%D9%8A%D9%86%D8%A7%D8%B1.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/401/%D8%B3%D9%85%D9%8A%D9%86%D8%A7%D8%B1.docx'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>دستورالعمل نحوه نگارش پایان نامه(ویرایش 1401)
+                        <br>نکته: دو نسخه چاپی صحافی شده پایان نامه به همراه CD به دانشگاه تحویل داده شود.
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/2605/negharesh.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>فرم دعوت به جلسه دفاعیه</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/2618/%D8%AF%D8%B9%D9%88%D8%AA%D9%86%D8%A7%D9%85%D9%87-%D8%AF%D9%81%D8%A7%D8%B9%DB%8C%D9%87.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/401/%D8%B3%D9%85%D9%8A%D9%86%D8%A7%D8%B1.docx'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>فرم عنوان پیشنهادی پایان نامه</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/62/title.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/63/title.doc'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>فرم پروپوزال(ویرایش مهر 1401)</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/2599/porpozal-%D9%88%DB%8C%D8%B1%D8%A7%DB%8C%D8%B4-1401.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/2598/porpozal-%D9%88%DB%8C%D8%B1%D8%A7%DB%8C%D8%B4-1401.doc'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>فرم گزارش پیشرفت کار پژوهشی دانشجو</td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/3077/%D9%81%D8%B1%D9%85_%DA%AF%D8%B2%D8%A7%D8%B1%D8%B4_%D9%BE%DB%8C%D8%B4%D8%B1%D9%81%D8%AA_%DA%A9%D8%A7%D8%B1_%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C_%D8%AF%D8%A7%D9%86%D8%B4%D8%AC%D9%88.docx'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>فرم پروپوزال گروه کامپیوتر</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/1154/%D9%BE%D8%B1%D9%88%D9%BE%D8%B2%D8%A7%D9%84-%DA%A9%D8%A7%D9%85%D9%BE%D9%8A%D9%88%D8%AA%D8%B1.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/1153/%D9%BE%D8%B1%D9%88%D9%BE%D8%B2%D8%A7%D9%84-%DA%A9%D8%A7%D9%85%D9%BE%D9%8A%D9%88%D8%AA%D8%B1.doc'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>شیوه ارجاع درون متنی و منبع نویسی بر اساس فرمت(APA)</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/65/APA.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                       </a>
+                    </td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>APA Reference List Models</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/64/apa.1.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>        
+        <div class = 'space' style = 'padding: 40px;'></div>
+        <table class = 'table-fill' id = 'form-nomre' style = 'margin: -111px 400px'>
+            <h7 style = 'position: relative; left: -400px; top: -125px;'>فرم نمره مقاله</h7>
+            <thead>
+                <tr>
+                    <th>شماره</th>
+                    <th>فرم</th>
+                    <th>فایل PDF</th>
+                    <th>فایل Word</th>
+                </tr>
+            </thead>
+            <tbody class = 'table-hover'>
+                <tr>
+                    <td>1</td>
+                    <td>فرم نمره مقاله
+                        <br>(رشته های مدیریت، حسابداری و مالی، حقوق، فنی و مهندسی)
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/3149/Nomre-maghale.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/3148/Nomre-maghale.docx'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>فرم نمره مقاله
+                        <br>(رشته های آموزش زبان انگلیسی، مترجمی زبان انگلیسی، زبان و ادبیات انگلیسی)
+                    </td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/3620/%D9%86%D9%85%D8%B1%D9%87_%D9%85%D9%82%D8%A7%D9%84%D9%87-18.docx'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class = 'space' style = 'padding: 40px;'></div>
+        <h7 style = 'position: relative; left: -400px; top: 70px;'>فرم عنوان پیشنهادی و پروپوزال</h7>
+        <table class = 'table-fill' id = 'form-proposal' style = 'margin: 110px 400px;'>
+            <thead>
+                <tr>
+                    <th>شماره</th>
+                    <th>فرم</th>
+                    <th>فایل PDF</th>
+                    <th>فایل Word</th>
+                </tr>
+            </thead>
+            <tbody class = 'table-hover'>
+                <tr>
+                    <td>1</td>
+                    <td>فرم عنوان پیشنهادی پایان نامه ادبیات، آموزش و مترجمی زبان انگلیسی</td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/731/form%201-new.docx'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>فرم پروپوزال
+                        <br>(ادبیات، آموزش و مترجمی زبان انگلیسی)
+                    </td>
+                    <td><a href = ''> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/732/%D9%81%D8%B1%D9%85_%D9%BE%D8%B1%D9%88%D9%BE%D9%88%D8%B2%D8%A7%D9%84_%DA%A9%D8%A7%D8%B1%D8%B4%D9%86%D8%A7%D8%B3%D9%8A_%D8%A7%D8%B1%D8%B4%D8%AF_%D8%B2%D8%A8%D8%A7%D9%86.docx'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class = 'space' style = 'padding: 40px;'></div>
+        <h7 style = 'position: relative; left: -400px; top: -150px;'>سامانه همانندجو</h7>
+        <table class = 'table-fill' id = 'samane-hamanandjoo' style = 'margin: -110px 400px;'>
+            <thead>
+                <tr>
+                    <th>شماره</th>
+                    <th>فرم</th>
+                    <th>فایل PDF</th>
+                </tr>
+            </thead>
+            <tbody class = 'table-hover'>
+                <tr>
+                    <td>1</td>
+                    <td>راهنمای استفاده از سامانه همانندجو</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/2295/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C-%D9%87%D9%85%D8%A7%D9%86%D9%86%D8%AF%D8%AC%D9%88.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>شناسه سامانه همانندجوی استادان راهنما</td>
+                    <td><a href = 'https://e-damavandihe.ac.ir/Sites/Files/2383/%D8%B4%D9%86%D8%A7%D8%B3%D9%87-%D9%87%D9%85%D8%A7%D9%86%D9%86%D8%AF-%D8%AC%D9%88-%D8%A7%D8%B3%D8%A7%D8%AA%DB%8C%D8%AF%D8%B4%D9%87%D8%B1%DB%8C%D9%88%D8%B1-1401.pdf'> 
+                        <div class = 'btn-circle-download'>
+                            <svg id = 'arrow' width = '14px' height = '20px' viewBox = '17 14 14 20'>
+                                <path d = 'M24,15 L24,32'></path>
+                                <polyline points = '30 27 24 33 18 27'></polyline>
+                            </svg>
+                            <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
+                                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
+                              </svg>
+                              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
+                                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
+                              </svg>
+                            </div>
+                            <!-- dribbble -->
+                            <a class="credit" href="https://dribbble.com/shots/4525196-Jelly-Download" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+                        </a>
+                </tr>
+            </tbody>
+        </table>
+        <div class = 'space' style = 'padding: 40px;'></div>
+        <h7 style = 'position: relative; left: 400px; top: 60px;'>جلد پایان نامه ها</h7>
+        <table class = 'table-fill' id = 'jeld-payanname' style = 'margin: 100px -400px;'>
+            <thead>
+                <tr>
+                    <th>شماره</th>
+                    <th>رشته ها</th>
+                    <th>رنگ جلد پایان نامه</th>
+                </tr>
+            </thead>
+            <tbody class = 'table-hover'>
+                <tr>
+                    <td>1</td>
+                    <td>مدیریت بازرگانی</td>
+                    <td>سبز</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>مدیریت صنعتی</td>
+                    <td>قهوه ای</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>حسابداری و حسابرسی</td>
+                    <td>زرشکی</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>مدیریت مالی و مهندسی مالی</td>
+                    <td>قرمز</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>مهندسی صنایع</td>
+                    <td>سورمه ای</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>زبان انگلیسی</td>
+                    <td>سفید</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+</main>
+</body>
+
+<footer dir="rtl" class = 'footer-payanname' style = 'margin-top: -5rem;'>
+    <div class="footer-col">  <!--ادرس واحد تهران-->
+        <h4>واحد تهران(مرکزی)</h4>
+        <ul class="footerul">
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-map-marker-alt"></i> تهران، خیابان انقلاب، ابتدای خیابان 
+                وصال <br> شیرازی، خیابان شهید رضا نایبی، پلاک 21
+            </a></li>
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-phone"></i> شماره تماس: 07-66483602-021
+            </a></li>
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-at"></i> info-er@e-damavandihe.ac.ir
+            </a></li>
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-mailbox"></i> کد پستی: 1416834311
+            </a></li>
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-fax"></i> فکس :66483608-021
+            </a></li>
+        </ul>
+    </div>
+    <div class="footer-col"> <!--گوگل مپ واحد تهران-->
+        <h4>ما را در تهران اینجا پیدا کنید!</h4>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6479.932917180228!2d51.40064!3d35.702443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e010feed173f9%3A0xdfefa760094d9d05!2sErshad-Damavand%20University!5e0!3m2!1sen!2snl!4v1716932282558!5m2!1sen!2snl" width="200" height="150" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="footer-col"> <!--ادرس واحد دماوند-->
+        <h4>واحد دماوند<h4>
+        <ul class="footerul">
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-map-marker-alt"></i> دماوند، گیلاوند، روبروی پلیس راه، 
+                ابتدای <br> شهرک گاز، جنب پمپ گاز، خیابان شهید تندگویان
+            </a></li>
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-phone"></i> شماره تماس: 09-76332404-021
+            </a></li> 
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-mailbox"></i> کد پستی: 3971911113
+            </a></li>
+            <li><a class="footerlink" href="#">
+                <i class="fas fa-fax"></i> فکس :76332410-021
+            </a></li>
+        </ul>
+    </div>
+    <div class="footer-col"> <!--گوگل مپ واحد دماوند-->
+        <h4>ما را در دماوند اینجا پیدا کنید!</h4>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d810.1157430015883!2d52.0106831!3d35.6902231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f91ccda81622881%3A0x2e1cb7877b032eb!2z2K_Yp9mG2LTar9in2Ycg2KfYsdi02KfYryDYr9mF2KfZiNmG2K8gLSDZiNin2K3YryDZvtiz2LHYp9mG!5e0!3m2!1sen!2s!4v1717229661931!5m2!1sen!2s" width="200" height="150" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+</footer>
+</html>
